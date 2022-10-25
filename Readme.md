@@ -12,6 +12,10 @@ Team Member 3 - Hari Prasath B
 Motivation:
 
    Inventories are also held with a motive to have a cushion against unpredicted business. There may be a sudden and unexpected spurt in demand for finished goods at times. Similarly, there may be unforeseen slump in the supply of raw materials at some time. And you know inventory management is keeping that stock in order. But inventory management is much more than just good organization. It also helps you manage the ordering, storage and carrying costs of your inventory, so you get a better ROI from your stock.
+   
+   
+   
+   
 Factors that impact inventory for a retailer
           1)Financial Factors
           2)Suppliers
@@ -23,6 +27,10 @@ Objectives:
           
  Material Availability:
           The primary goal of inventory management is to ensure that all kinds of materials are accessible whenever the production department needs them, ensuring that production is not stopped or slowed down due to a lack of resources.
+          
+          
+          
+          
  Better Level of Customer Service:
         It is impossible to fulfil a received order if you do not have an accurate count of the items in your possession. In order to meet requests, you must have accessible the appropriate goods at the right time. Otherwise, you may end yourself in a state of confusion.
  
