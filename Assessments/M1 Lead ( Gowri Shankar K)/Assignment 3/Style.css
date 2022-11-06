@@ -1,0 +1,29 @@
+* {
+ box-sizing: border-box;
+}
+
+h2,h4{
+    text-align: center;
+}
+.col{
+ float: left;
+ width: 450.3;
+ padding: 5px;
+}
+.row::after{
+ content: "";
+ clear: both;
+ display: table;
+}
+img:hover{
+ border: 5px;
+ border-radius: 50%;
+ padding: 5px;
+ border-color: black;
+ box-shadow: inherit;
+
+}
+img{
+ margin-left: 50px;
+ border-radius: 80%;
+}
