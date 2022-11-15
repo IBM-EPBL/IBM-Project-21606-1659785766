@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://prk.s3.jp-tok.cloud-object-storage.appdomain.cloud/style.css">
+    <title>Assignment 3</title>
+    
+</head>
+<body>
+    <nav>
+      <p>Prakash</p><p>   IBM   </p><p>Assignment 3</p>
+    </nav>
+<img class="image1" src="https://prk.s3.jp-tok.cloud-object-storage.appdomain.cloud/img1.png" alt="">
+  <img class="image2" src="https://prk.s3.jp-tok.cloud-object-storage.appdomain.cloud/img2.jpg" alt="">  
+  <img class="image3" src="https://prk.s3.jp-tok.cloud-object-storage.appdomain.cloud/img3.jpg" alt="">
+  <img class="image4" src="https://prk.s3.jp-tok.cloud-object-storage.appdomain.cloud/img4.png" alt="">
+  <img class="image5" src="https://prk.s3.jp-tok.cloud-object-storage.appdomain.cloud/img5.jpg" alt="">
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "6e62d771-ee16-4789-aa8b-dcc5a8540ab0", // The ID of this integration.
+      region: "au-syd", // The region your integration is hosted in.
+      serviceInstanceID: "862266e5-4423-4f13-8faa-5de6b0170a15", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</body>
+</html>
