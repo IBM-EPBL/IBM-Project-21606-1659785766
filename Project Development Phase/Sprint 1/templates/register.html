@@ -1,0 +1,68 @@
+{% extends "template1.html" %}
+{% block content %}
+<body>
+  <script>
+    function validate(){
+        let setpass= document.getElementById("exampleInputPassword1").value;
+        let confirmpass= document.getElementById("exampleInputPassword2").value;
+        if(setpass!=confirmpass){
+            alert("password mismatches");
+        }
+    }
+    
+</script>
+  
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+     {% for message in messages %}
+        <h1 id="msg" display="none" style="height: 40px;
+        padding-top: 3px; background-color: rgb(68, 201, 199);font-size: x-large; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: inherit;">{{message}}</h1>
+     {% endfor %}
+  {% endif %}
+{% endwith %}
+<div class="vh-100 d-flex justify-content-center align-items-center ">
+  <div class="col-md-5 p-5 shadow-sm border rounded-5 border-primary bg-warning">
+        <h2 class="text-center mb-4 text-dark">Register</h2>
+        <form action="{{url_for('register')}}" method="post">
+
+            <div class="row g-3">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Username" name="name" aria-label="Username" required>
+                </div>
+            </div>
+            <br>
+
+            <div class="row g-3">
+                <div class="col">
+                  <input type="email" class="form-control" placeholder="Email ID" name="email" aria-label="Email ID" required>
+                </div>
+            </div>
+            <br>
+
+            <div class="row g-3">
+                <div class="col">
+                  <input type="password" class="form-control" name="password" placeholder="Password" aria-label="Password" required>
+                </div>  
+            </div>
+            <br>
+
+            <div class="row g-3">
+                <div class="col">
+                  <input type="password" class="form-control" name="password2" placeholder="Confirm Password" aria-label="Confirm Password" required>
+                </div>
+            </div>
+            <br>
+            <br>
+
+            
+
+            <div class="d-grid">
+                <button class="btn btn-dark text-break" type="submit" onclick="validate()">Register</button>
+            </div>
+        </form>
+      
+  </div>
+</div>
+
+</body>
+  {% endblock %}
