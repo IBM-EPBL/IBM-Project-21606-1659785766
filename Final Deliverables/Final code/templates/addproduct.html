@@ -1,0 +1,68 @@
+{% extends "template2.html" %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+         <h1 id="msg" display="none" style="height: 40px;
+         padding-top: 3px; background-color: rgb(68, 201, 199);font-size: x-large; text-align: center;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: inherit;">{{message}}</h1>
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+<body>
+    
+
+    <div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items" style="background-color: darkcyan;">
+                    <h3>ADD PRODUCT</h3>
+                    <p>Provide Product Details</p>
+                    <form class="requires-validation" action="/addproduct" method="post">
+                        <div class="col-md-10">
+                            <input class="form-control" type="number" name="productid" placeholder="Product ID" >
+                         </div>
+                        <div class="col-md-10">
+                           <input class="form-control" type="text" name="productname" placeholder="Product Name" >
+                        </div>
+                    
+                    <!-- <label for="image" class="form-label text-dark ">Upload Product Image</label> -->
+                        <div class="col-md-10">
+                            <input class="form-control" type="text"  name="imageurl" placeholder="Image URL" >
+                         </div>
+                        
+                        <div class="col-md-10">
+                            <input class="form-control" type="text" name="quantity" placeholder="Quantity" >
+                        </div>
+
+                       <div class="col-md-10">
+                          <input class="form-control" type="text" name="price" placeholder="Price" >
+                       </div>
+                       
+                       
+                       
+                     
+
+                    
+              
+                 
+
+                        <div  class="form-button mt-3">
+                            <button id="submit" type="submit" class="btn btn-primary">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+   
+   $("#submit").click(function(){
+  $("#msg").fadeOut(2000);
+});
+  </script>
+</body>
+
+{% endblock %}
