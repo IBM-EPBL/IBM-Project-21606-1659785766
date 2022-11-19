@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{url_for('static', filename='addproduct.css') }}">
+        <!-- <link rel="icon" href="{{ url_for('static', filename='site_icon.png') }}" class="js-favicon"> -->
+        <!--div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div-->
+        <script src="{{ url_for('static', filename='jquery-3.3.1.slim.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+        <link rel="stylesheet" href="{{url_for('static',filename='product.css')}}">
+        <!-- <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}"> -->
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+     
+     
+    </head>
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: rgb(14, 219, 199);">
+        <a class="navbar-brand" href="#">Retailer Inventory Management</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Add Product
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/addproduct">Add</a>
+                <!-- <div class="dropdown-divider"></div> -->
+                <!-- <a class="dropdown-item" href="#">Stats</a> -->
+               
+            </li>
+           
+          </ul>
+         
+        </div>
+      </nav>
+        {% block content %}
+        {% endblock %}
+  
+</html>
