@@ -1,0 +1,86 @@
+{% extends "template1.html" %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+         <h1 id="msg" display="none" style="height: 40px;
+         padding-top: 3px; background-color: rgb(68, 201, 199);font-size: x-large; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: inherit;">{{message}}</h1>
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+
+<div class="vh-100 d-flex justify-content-center align-items-center ">
+  <div class="col-md-5 p-5 shadow-sm border rounded-5 border-primary bg-black">
+      <h2 class="text-center mb-4 text-info"> Login</h2>
+      <form action="/login" method="post">
+          <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label text-warning bg-dark">Email address</label>
+              <input type="email" name="email" class="form-control border border-primary" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label text-warning bg-dark">Password</label>
+              <input type="password" name="password" class="form-control border border-primary" id="exampleInputPassword1">
+          </div>
+          <!-- <p class="small"><a class="text-light" href="forget-password.html">Forgot password?</a></p> -->
+          <br>
+          <div class="d-grid">
+              <button class="btn btn-primary" type="submit">Login</button>
+          </div>
+      </form>
+      <!-- <div class="mt-3">
+          <p class="mb-0  text-info">Don't have an account? <a href="Register.html"
+                  class="text-light fw-bold">Register</a></p>
+      </div> -->
+  </div>
+</div>
+
+
+<!-- <section class="vh-80" style="background-color: #eee;">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-12 col-xl-11">
+          <div class="card text-black" style="border-radius: 25px;">
+            <div class="card-body p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+  
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign in</p>
+  
+                  <form class="mx-1 mx-md-4" action="/login" method="post">
+  
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="email" id="form3Example3c" name="email" class="form-control" />
+                        <label class="form-label" for="form3Example3c">Your Email</label>
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="password" id="form3Example4c" name="password"  class="form-control" />
+                        <label class="form-label" for="form3Example4c">Password</label>
+                      </div>
+                    </div>
+  
+                  
+  
+                   
+  
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                    </div>
+                  </form>
+  
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  {% endblock %}

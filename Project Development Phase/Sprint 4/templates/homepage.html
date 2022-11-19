@@ -1,0 +1,80 @@
+{% extends "template1.html" %}
+  {% block content %}
+  {% with messages = get_flashed_messages() %}
+   {% if messages %}
+      <!-- {% for message in messages %} -->
+         <h1 id="msg" display="none" style="height: 40px;
+         padding-top: 3px; background-color: rgb(68, 201, 199);font-size: x-large; text-align: center;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: inherit;">{{message}}</h1>
+      <!-- {% endfor %} -->
+   {% endif %}
+{% endwith %}
+  <div class="container d-flex justify-content-center mt-0 mb-50">
+            
+    <div class="row" style="gap: 100px">
+    {%for item in product %}
+    <div class="col-md-4 mt-2" style="gap:60px">
+        
+        <form action="/cartadd" method="post"> 
+        <div class="cart_container" style=" display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        gap: 60px;
+        flex-wrap: wrap;
+        /* margin-right: 10%;
+        margin-left: 10%;
+        margin-top: 5%;
+        margin-bottom: 5%; */
+    ">
+            <div class="firstcart" >
+                <div class="card" style="width: 15rem; border-radius: 5%; background-color: rgb(184, 180, 179);">
+                    <br>
+                    <img src="{{item['IMGURL']}}" style="width: 13rem; height:7.5rem; margin-left: 1rem; border-radius: 3px;" alt="">            
+                    <div class="card-body mb-3" style="background-color: rgb(184, 180, 179);">
+                      <h5 class="card-title" data-abc="true">{{item['PRODUCTNAME']}}</h5>
+                      <p class="card-text" >Rs.{{item['PRICE']}}</p>
+                      <input type="number" style="width: 50%;" min="0" name="quantity" placeholder="Quantity"/>
+                      <input type="hidden" name="id" value="{{item['PRODUCTID']}}">
+                      <!-- <a href="/cartadd?id={{item['PRODUCTID']}}" class="btn btn-dark">Add to cart</a> -->
+                      <a href="/cartadd?id={{item['PRODUCTID']}}"><button type="submit" class="btn btn-dark" id="{{item['PRODUCTID']}}">
+                        <i class="fa fa-cart-plus mr-2"></i> Buy</button>
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- <div class="card" style="height: 390px;">
+               
+                                <div class="card-body" style="height: 20rem;">
+                                    <div class="card-img-actions " style="width: 13rem; height: 15rem;">
+                                        
+                                            <img src="{{item['IMGURL']}}" class="card-img img-fluid" width="96" height="350" alt="">
+                                          
+                                       
+                                    </div>
+                                </div>
+
+                                <div class="card-body bg-light text-center">
+                                    <div class="mb-2 text-bg-light">
+                                        <h6 class="font-weight-semibold mb-2">
+                                            <a href="#" class="text-danger mb-2" data-abc="true">{{item['PRODUCTNAME']}}</a>
+                                        </h6>
+
+                                    </div>
+
+                                    <h3 class="mb-0 font-weight-semibold"> RS.{{item['PRICE']}}</h3>
+                                    <input type="number" style="width: 50%;" min="0" name="quantity" placeholder="Quantity"/>
+                                    <input type="hidden" name="id" value="{{item['PRODUCTID']}}">
+                                    
+                                    <a href="/cartadd?id={{item['PRODUCTID']}}"><button type="submit" class="btn bg-cart" id="{{item['PRODUCTID']}}"><i class="fa fa-cart-plus mr-2"></i> Add to cart</button></a>  
+                                    <br> 
+                                </div>
+                </div>     -->
+        </form>                
+    </div> 
+{% endfor %}
+
+    </div>
+</div>
+{% endblock %}    
