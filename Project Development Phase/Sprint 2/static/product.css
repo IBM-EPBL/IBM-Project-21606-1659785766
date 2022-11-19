@@ -1,0 +1,14 @@
+img{
+    height: 64px;
+    width: 64px;
+}
+/* tr{
+   display: flex;
+   direction: column;
+   justify-content: center;
+} */
+table > tr > td{
+   position: relative;
+   top: 50%;
+   background-color: white;
+}

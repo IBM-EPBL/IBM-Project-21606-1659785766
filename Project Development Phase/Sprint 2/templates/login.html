@@ -1,0 +1,35 @@
+{% extends "template1.html" %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+         <h1 id="msg" display="none" style="height: 40px;
+         padding-top: 3px; background-color: rgb(68, 201, 199);font-size: x-large; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: inherit;">{{message}}</h1>
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+
+<div class="vh-100 d-flex justify-content-center align-items-center ">
+  <div class="col-md-5 p-5 shadow-sm border rounded-5 border-primary bg-black">
+      <h2 class="text-center mb-4 text-info"> Login</h2>
+      <form action="/login" method="post">
+          <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label text-warning bg-dark">Email address</label>
+              <input type="email" name="email" class="form-control border border-primary" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label text-warning bg-dark">Password</label>
+              <input type="password" name="password" class="form-control border border-primary" id="exampleInputPassword1">
+          </div>
+          <br>
+          <div class="d-grid">
+              <button class="btn btn-primary" type="submit">Login</button>
+          </div>
+      </form>
+     
+  </div>
+</div>
+
+
+
+  {% endblock %}
